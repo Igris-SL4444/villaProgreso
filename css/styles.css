@@ -48,6 +48,7 @@ html {
 body {
     min-height: 100dvh;
     font-size: 1.6rem; /* = 16px por defexto en html*/
+    background-color: #FFC6C6;
 }
 
 input,
