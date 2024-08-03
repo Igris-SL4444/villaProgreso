@@ -143,7 +143,7 @@ svg {
     }
 
     .container {
-        padding: 0;
+        padding: 0 2rem;
     }
 
     .section__article {
@@ -173,6 +173,9 @@ svg {
 @media (width >= 1280px) {
     .xl {
         /* background-color: pink; */
+    }
+    .container {
+        padding: 0;
     }
 }
 
