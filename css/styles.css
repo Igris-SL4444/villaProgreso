@@ -49,14 +49,16 @@
 
 html {
     font-family: 'DM Mono', monospace, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 62.5%; /* 1rem = 10px*/
+    font-size: 62.5%;
+    /* 1rem = 10px*/
     font-weight: normal;
     font-style: normal;
 }
 
 body {
     min-height: 100dvh;
-    font-size: 1.6rem; /* = 16px por defexto en html*/
+    font-size: 1.6rem;
+    /* = 16px por defexto en html*/
     background-color: #FFC6C6;
 }
 
@@ -89,7 +91,7 @@ svg {
 
 .container {
     width: 100%;
-    max-width: 1280px;
+    max-width: 1024px;
     min-width: 360px;
     margin: 0 auto;
     padding: 0 1.6rem;
@@ -103,18 +105,22 @@ svg {
     justify-content: space-between;
     height: 80px;
 }
+
 .nav:has(.nav__checkbox:checked) {
     --nav-icon-background: url('../img/ico/x-regular-24.png');
 
     --transform-list-menu: translate(0)
 }
+
 .nav__checkbox {
     display: none;
 }
 
-.nav__label, .nav__logo--link {
+.nav__label,
+.nav__logo--link {
     z-index: 100;
 }
+
 .nav__label {
     width: 36px;
     height: 36px;
@@ -144,12 +150,14 @@ svg {
     transform: var(--transform-list-menu);
     transition: transform .5s;
 }
+
 .nav__link {
     display: inline-block;
     padding: .8rem .5rem;
     color: #000;
     text-decoration: none;
 }
+
 /* .nav__link--cta {
     border: 1px solid #000;
 } */
@@ -173,6 +181,7 @@ svg {
 
     .article__img {
         height: auto;
+
         img {
             height: 100%;
             min-height: 24rem;
@@ -188,7 +197,7 @@ svg {
         flex-direction: column;
         justify-content: start;
         gap: 1.6rem;
-        
+
         h1 {
             font-size: 3.2rem;
             font-style: italic;
@@ -211,7 +220,7 @@ svg {
             place-content: center;
             width: 100%;
             height: 100%;
-            
+
             text-decoration: none;
             color: black;
             font-size: large;
@@ -219,26 +228,82 @@ svg {
             font-style: italic;
         }
     }
+
     button:hover {
         cursor: pointer;
         background-color: #F0A8D0;
     }
 }
 
+.main__turismo {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
 
-@media (width >= 640px) {
+    .section__turismo {
+        width: 100%;
+        display: grid;
+        grid-template-rows: 16rem minmax(4rem, auto) minmax(12rem, auto);
+        grid-template-columns: auto;
+        background-color: red;
+        padding-bottom: 1rem;
+
+        border-radius: 1.6rem;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            align-content: center;
+        }
+
+        header,
+        section {
+            padding: 0 2rem;
+        }
+
+        header {
+            align-content: start;
+            padding-top: 0.4rem;
+
+            h2 {
+                font-style: italic;
+            }
+        }
+
+        section {
+            align-content: start;
+        }
+
+    }
+
+}
+
+
+
+
+
+@media (width >=640px) {
     .sm {
         /* background-color: red; */
     }
 }
 
-@media (width >= 768px) {
+@media (width >=768px) {
     .md {
         /* background-color: blue; */
     }
+    .main__turismo {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
-@media (width >= 1024px) {
+@media (width >= 980px) {
+    
+}
+
+@media (width >=1024px) {
     .lg {
         /* background-color: green; */
     }
@@ -266,21 +331,25 @@ svg {
             justify-content: center;
         }
     }
+
     .reverse {
         flex-direction: row;
     }
+
+    
 }
 
-@media (width >= 1280px) {
+@media (width >=1280px) {
     .xl {
         /* background-color: pink; */
     }
+
     .container {
         padding: 0;
     }
 }
 
-@media (width >= 1536px) {
+@media (width >=1536px) {
     .xxl {
         /* background-color: purple; */
     }
