@@ -1,0 +1,326 @@
+/*
+// Reglas para CSS
+1. Posicionamiento
+2. Modelo de caja (box model)
+3. Tipografia
+4. Visuales 'efecto visuales como el hover'
+5. Otras / Miselaneos
+
+// Breakpoints
+xs: 360px;
+s: 440px;
+m: 768;
+l: 1280px;
+xl: 1440px;
+*/
+
+/* varialble para colores */
+:root {
+  --xs: 360px;
+  --s: 440px;
+  --m: 768px;
+  --l: 1280px;
+  --xl: 1440px;
+
+  --fondo-principal: #1e1e1e;
+  --fondo-secundario: #2a2a2a; /*targetas, modales, elementos scuendarios*/
+  --text-color: #e0e0e0;
+  --acento: #f48fb1; /*botones, iconos, interactividad*/
+  --detalles: #c7748e;
+
+  --transform-menu-mobile: translate(-100%);
+  --nav-icon-menu: url("./img/icon/icon-menu-open-black.png");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p {
+  text-wrap: pretty;
+  color: var(--text-color);
+}
+ul {
+  color: var(--text-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+  color: var(--text-color);
+}
+
+img,
+video,
+svg {
+  height: auto;
+  max-width: 100%;
+}
+
+html {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 62.5%; /* 100% = 16px, (10 * 100) / 16 = 62.5% =>  1rem = 10px*/
+  font-weight: normal;
+  font-style: normal;
+
+  scrollbar-color: var(--detalles) var(--fondo-principal);
+  scrollbar-width: thin;
+}
+
+body {
+  min-height: 100dvh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+
+  background-color: var(--fondo-principal);
+  font-size: 1.6rem;
+}
+
+.container {
+  width: 100%;
+  min-width: 360px;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: var(--acento);
+  position: sticky;
+  top: 0;
+}
+
+nav {
+  padding: 0 20px;
+}
+.nav__container {
+  /* background-color: var(--acento); */
+}
+
+.nav__container {
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+
+  --icon-menu-open: url(../assets/icons/menu_black.svg);
+  --transform-menu-show: translate(-100%);
+}
+
+.nav__container:has(.nav__input:checked) {
+  --icon-menu-open: url(../assets/icons/close_black.svg);
+  --transform-menu-show: translate(0);
+}
+
+.nav__figure,
+.nav__toggle {
+  z-index: 10;
+}
+
+.nav__input {
+  display: none;
+}
+
+.nav__toggle {
+  width: 30px;
+  height: 30px;
+  background-image: var(--icon-menu-open);
+  background-size: cover;
+  cursor: pointer;
+
+  transition: backgroun-image 0.5s;
+}
+
+.nav__input {
+  width: 40px;
+  height: 40px;
+}
+.nav__link {
+  color: var(--fondo-principal);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.nav__list {
+  transform: var(--transform-menu-show);
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  gap: 2rem;
+  text-align: center;
+
+  position: fixed;
+  inset: 0;
+  list-style: none;
+  background-color: none;
+
+  padding: 1.5rem 5%;
+
+  transition: 0.5s transform;
+
+  background-color: var(--acento);
+}
+
+.main {
+  display: grid;
+  gap: 1rem;
+  background-color: var(--fondo-secundario);
+
+  .main__wall {
+    height: 280px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .main__description {
+    .article {
+      display: grid;
+      grid-template-rows: auto 240px;
+      gap: 1.2rem;
+
+      div {
+        display: grid;
+        gap: 1.2rem;
+        padding: 0 2rem;
+        h1 {
+          font-size: 3.2rem;
+          text-align: center;
+          font-style: italic;
+        }
+
+        a {
+          background-color: var(--acento);
+          font-weight: bold;
+          border-radius: 0.8rem;
+          padding: 4px 0;
+          text-align: center;
+          text-decoration: none;
+        }
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .main__cards {
+    display: grid;
+    gap: 0.8rem;
+    grid-template-columns: repeat(auto-fit, minmax(302px, 1fr));
+
+    .card {
+      min-width: 320px;
+      display: grid;
+      grid-template-rows: auto auto auto auto;
+      gap: 1.2rem;
+
+      border: 2px solid var(--acento);
+      padding: 0 0 10px 0;
+      border-radius: 12px;
+
+      img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 12px 12px 0 0;
+      }
+      h2 {
+        text-align: center;
+        align-self: center;
+      }
+      p {
+        padding: 0 20px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
+      }
+      a {
+        justify-self: center;
+        width: 90%;
+        background-color: var(--acento);
+        color: var(--fondo-principal);
+        font-weight: bold;
+        border-radius: 0.8rem;
+        padding: 4px 0;
+        text-align: center;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.footer {
+  height: 120px;
+  background-color: var(--detalles);
+  margin-top: 20px;
+}
+
+@media (width > 764px) {
+  .nav__container {
+    --transform-menu-show: translate(0);
+  }
+  .nav__toggle {
+    display: none;
+  }
+
+  .nav__list {
+    position: static;
+    grid-auto-flow: column;
+    place-content: unset;
+    padding: 0;
+
+    transition: unset;
+  }
+
+  .main {
+    .main__description {
+      .article {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 320px;
+
+        div {
+          align-content: center;
+        }
+      }
+    }
+    .main__cards {
+
+      .card {
+        grid-template-rows: auto minmax(100px, auto) 1fr auto;
+      }
+    }
+  }
+}
+
+@media (width > 1080px) {
+  .nav {
+    padding: 0;
+  }
+}
