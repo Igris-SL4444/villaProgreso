@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="es-MX">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Villa Progreso</title>
 
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="" />
 
     <link
       rel="icon"
@@ -41,100 +41,179 @@
 
     <!-- <script defer src="js.js"></script> -->
 
-    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./styles/styles_menu.css" />
+    <link rel="stylesheet" href="./styles/styles_carousel.css" />
     <!-- <link rel="stylesheet" href="./css/tablet.css" media="screen and (min-width: 600px)"> -->
     <!--media=s"creen and (width >= 600px)"-->
-</head>
-<body>
-  <header class="header">
-      <nav class="nav nav__container container">
+    <script defer src="./js/carousel.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <div class="nav__container container">
+          <figure class="nav__figure">
+            <img src="./assets/icons/logoVilla.png" alt="" class="nav__logo" />
+          </figure>
 
-        <figure class="nav__figure">
-          <img src="./assets/icons/logoVilla.png" alt="">
-        </figure>
+          <label class="nav__toggle">
+            <input type="checkbox" id="menu-input" class="nav__input" />
+          </label>
 
-        <label class="nav__toggle">
-          <input 
-            type="checkbox" 
-            id="menu-input" 
-            class="nav__input">
-        </label>
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#" class="nav__link"> Turismo </a>
+            </li>
 
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a href="#" class="nav__link">Turismo</a>
-          </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link"> Eventos </a>
+            </li>
 
-          <li class="nav__item">
-            <a href="#" class="nav__link">Eventos</a>
-          </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link"> Artesania </a>
+            </li>
 
-          <li class="nav__item">
-            <a href="#" class="nav__link">Artesania</a>
-          </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link"> Gastronomia </a>
+            </li>
 
-          <li class="nav__item">
-            <a href="#" class="nav__link">Gastronomia</a>
-          </li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">Cultura</a>
-          </li>
-        </ul>
-    </nav>
-  </header>
-
-  <main class="main container">
-    <section class="main__wall">
-      <img src="./assets/img/letras169.jpg" alt="">
-    </section>
-
-    <section class="main__description">
-      <article class="article">
-        <div>
-          <h1>
-            San Miguel de la Tetillas, hoy Villa Progreso
-          </h1>
-
-          <p>
-            Villa Progreso o San Miguel de las Tetillas como era nombrado, es una población que se encuentra localizada a 7 Km. de la cabecera municipal de Ezequiel Montes y a 67 km. de la capital del estado de Queretaro.
-          </p>
-
-          <a>
-            Ver mas
-          </a>
+            <li class="nav__item">
+              <a href="#" class="nav__link"> Cultura </a>
+            </li>
+          </ul>
         </div>
+      </nav>
+    </header>
 
-        <img src="./assets/img/villa_panoramica.png" alt="aqui va una imagen">
-      </article>
-    </section>
+    <main class="main container">
 
-    <section class="main__cards">
-      <article class="card">
-        <img src="./assets/img/parroquia43.jpg" alt="">
-        <h2>Lugares de turismo de Villa Progreso</h2>
-        <p>En Villa Progreso puede visitar diferentes sitios turísticos como los siguientes…</p>
-        <a href="#">Ver mas</a>
-      </article>
+      <section class="section__carousel">
+        <div class="wrapper">
+          <img
+            src="./assets/icons/carousel/arrow-left.png"
+            alt=""
+            class="i left"
+            id="left"
+          />
 
-      <article class="card">
-        <img src="./assets/img/planta__maguey.jpg" alt="">
-        <h2>Maguey, Ixtle y Pulque, cultura de nuestros antepasados otomíes</h2>
-        <p>El ixtle o istle es una fibra vegetal que se obtiene de las pencas de ciertos magueyes como el agave ixtli y se usa para la fabricación artesanal de prendas, ayates, mecates, etc.</p>
-        <a href="#">Ver mas</a>
-      </article>
-      <article class="card">
-        <img src="./assets/img/actividadlaboral.webp" alt="">
-        <h2>Actividades laborales</h2>
-        <p>En lo que respecta a las actividades laborales de la población otomí, el trabajo fue dividido entre hombres y mujeres. La actividad de los hombres fue casi siempre la agricultura, en siembra temporal, en algunas regiones cercana a la laguna se practico el riego por medio de canales aunque con redes y salabre, y la fabricación de esteras en zonas adecuadas para ello.</p>
-        <a href="#">Ver mas</a>
-      </article>
+          <ul class="carousel">
+            <li class="card">
+              <div class="img">
+                <a href="https://villaprogreso.com/" target="_blank">
+                  <img src="./assets/img/letras169.jpg" alt="" draggable="false" />
+                </a>
+              </div>
+            </li>
 
-    </section>
-  </main>
+            <li class="card">
+              <div class="img">
+                <a href="https://villaprogreso.com/" target="_blank"></a>
+                <picture>
+                  <source
+                    media="(min-width:1020px)"
+                    srcset="./assets/icons/carousel/anunciate/anuncio1024.webp"
+                  />
 
-  <footer class="footer container">
-    Proyecto echo por la comunidad y para la comunidad
-  </footer>
-    
-</body>
+                  <source
+                    media="(min-width:760px)"
+                    srcset="./assets/icons/carousel/anunciate/anuncio768.webp"
+                  />
+
+                  <source
+                    media="(min-width:640px)"
+                    srcset="./assets/icons/carousel/anunciate/anuncio640.webp"
+                  />
+                  
+                    <img
+                      src="./assets/icons/carousel/anunciate/anuncio360.webp"
+                      alt="Aqui puedes anunciarte"
+                      draggable="false"
+                    />
+                  
+                </picture>
+              </a>
+              </div>
+            </li>
+
+            <!-- <li class="card">
+              <div class="img">
+                <img src="./yinshi.jpg" alt="" draggable="false" />
+              </div>
+            </li> -->
+          </ul>
+
+          <img
+            src="./assets/icons/carousel/arrow-right.png"
+            alt=""
+            class="i righ"
+            id="right"
+          />
+        </div>
+      </section>
+
+      <!-- <section class="main__description">
+        <article class="article">
+          <div>
+            <h1>San Miguel de la Tetillas, hoy Villa Progreso</h1>
+
+            <p>
+              Villa Progreso o San Miguel de las Tetillas como era nombrado, es
+              una población que se encuentra localizada a 7 Km. de la cabecera
+              municipal de Ezequiel Montes y a 67 km. de la capital del estado
+              de Queretaro.
+            </p>
+
+            <a> Ver mas </a>
+          </div>
+
+          <img
+            src="./assets/img/villa_panoramica.png"
+            alt="aqui va una imagen"
+          />
+        </article>
+      </section>
+
+      <section class="main__cards">
+        <article class="card">
+          <img src="./assets/img/parroquia43.jpg" alt="" />
+          <h2>Lugares de turismo de Villa Progreso</h2>
+          <p>
+            En Villa Progreso puede visitar diferentes sitios turísticos como
+            los siguientes…
+          </p>
+          <a href="#">Ver mas</a>
+        </article>
+
+        <article class="card">
+          <img src="./assets/img/planta__maguey.jpg" alt="" />
+          <h2>
+            Maguey, Ixtle y Pulque, cultura de nuestros antepasados otomíes
+          </h2>
+          <p>
+            El ixtle o istle es una fibra vegetal que se obtiene de las pencas
+            de ciertos magueyes como el agave ixtli y se usa para la fabricación
+            artesanal de prendas, ayates, mecates, etc.
+          </p>
+          <a href="#">Ver mas</a>
+        </article>
+        <article class="card">
+          <img src="./assets/img/actividadlaboral.webp" alt="" />
+          <h2>Actividades laborales</h2>
+          <p>
+            En lo que respecta a las actividades laborales de la población
+            otomí, el trabajo fue dividido entre hombres y mujeres. La actividad
+            de los hombres fue casi siempre la agricultura, en siembra temporal,
+            en algunas regiones cercana a la laguna se practico el riego por
+            medio de canales aunque con redes y salabre, y la fabricación de
+            esteras en zonas adecuadas para ello.
+          </p>
+          <a href="#">Ver mas</a>
+        </article>
+      </section> -->
+    </main>
+
+    <footer class="footer container">
+      Proyecto echo por la comunidad y para la comunidad
+    </footer>
+  </body>
 </html>
