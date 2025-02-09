@@ -44,7 +44,8 @@
     <link rel="stylesheet" href="./styles/styles.css" />
     <link rel="stylesheet" href="./styles/styles_menu.css" />
     <link rel="stylesheet" href="./styles/styles_carousel.css" />
-    <link rel="stylesheet" href="./styles/styles_description.css">
+    <link rel="stylesheet" href="./styles/styles_description.css" />
+    <link rel="stylesheet" href="./styles/style_cards.css" />
     <!-- <link rel="stylesheet" href="./css/tablet.css" media="screen and (min-width: 600px)"> -->
     <!--media=s"creen and (width >= 600px)"-->
     <script defer src="./js/carousel.js"></script>
@@ -87,7 +88,7 @@
     </header>
 
     <main class="main container">
-
+      
       <section class="section__carousel">
         <div class="wrapper">
           <img
@@ -101,38 +102,43 @@
             <li class="card">
               <div class="img">
                 <a href="https://villaprogreso.com/" target="_blank">
-                  <img src="./assets/img/letras169.jpg" alt="" draggable="false" />
+                  <img
+                    src="./assets/img/letras169.jpg"
+                    alt=""
+                    draggable="false"
+                  />
                 </a>
               </div>
             </li>
 
             <li class="card">
               <div class="img">
-                <a href="https://villaprogreso.com/" target="_blank"></a>
-                <picture>
-                  <source
-                    media="(min-width:1020px)"
-                    srcset="./assets/icons/carousel/anunciate/anuncio1024.webp"
-                  />
+                <a href="https://villaprogreso.com/" target="_blank">
+                  <picture>
+                    <source
+                      media="(min-width:1020px)"
+                      srcset="
+                        ./assets/icons/carousel/anunciate/anuncio1024.webp
+                      "
+                    />
 
-                  <source
-                    media="(min-width:760px)"
-                    srcset="./assets/icons/carousel/anunciate/anuncio768.webp"
-                  />
+                    <source
+                      media="(min-width:760px)"
+                      srcset="./assets/icons/carousel/anunciate/anuncio768.webp"
+                    />
 
-                  <source
-                    media="(min-width:640px)"
-                    srcset="./assets/icons/carousel/anunciate/anuncio640.webp"
-                  />
-                  
+                    <source
+                      media="(min-width:640px)"
+                      srcset="./assets/icons/carousel/anunciate/anuncio640.webp"
+                    />
+
                     <img
                       src="./assets/icons/carousel/anunciate/anuncio360.webp"
                       alt="Aqui puedes anunciarte"
                       draggable="false"
                     />
-                  
-                </picture>
-              </a>
+                  </picture>
+                </a>
               </div>
             </li>
 
@@ -153,7 +159,8 @@
       </section>
 
       <section class="main__description">
-        <article class="article">
+
+        <article class="description">
           <div>
             <h1>San Miguel de la Tetillas, hoy Villa Progreso</h1>
 
@@ -174,48 +181,56 @@
         </article>
       </section>
 
-      <!-- <section class="main__cards">
+      <section class="main__cards">
+
         <article class="card">
-          <img src="./assets/img/parroquia43.jpg" alt="" />
-          <h2>Lugares de turismo de Villa Progreso</h2>
-          <p>
-            En Villa Progreso puede visitar diferentes sitios turísticos como
-            los siguientes…
-          </p>
-          <a href="#">Ver mas</a>
+          <picture>
+            <img src="./assets/img/Mayahuel.webp" alt="">
+          </picture>
+          <div>
+            <h2 class="card__title">El maguey el ixtle y el pulque, cultura de nuestros antepasados otomíes</h2>
+            <p class="card__texto">
+              El ixtle o istle es una fibra vegetal que se obtiene de las pencas de ciertos magueyes como el agave ixtli y se usa para la fabricación artesanal de prendas, ayates, mecates, etc.
+            </p>
+            <a href="" class="card__button">Ver más</a>
+          </div>
         </article>
 
         <article class="card">
-          <img src="./assets/img/planta__maguey.jpg" alt="" />
-          <h2>
-            Maguey, Ixtle y Pulque, cultura de nuestros antepasados otomíes
-          </h2>
-          <p>
-            El ixtle o istle es una fibra vegetal que se obtiene de las pencas
-            de ciertos magueyes como el agave ixtli y se usa para la fabricación
-            artesanal de prendas, ayates, mecates, etc.
-          </p>
-          <a href="#">Ver mas</a>
+          <picture>
+            <img src="./assets/img/turismo.jpeg" alt="">
+          </picture>
+          <div>
+            <h2 class="card__title">
+              Lugares de turismo y recreación
+            </h2>
+            <p class="card__texto">
+              Lugar abierto al publico, donde uno puede ir en compañía  para poder observar  las vistas que este proporciona desde su punto mas alto. En este se encuentra una capilla de antigüedad que proporciona refugio para las personas que se aventuran subir dicho cerro.
+            </p>
+            <a href="" class="card__button">Ver más</a>
+          </div>
         </article>
-        <article class="card">
-          <img src="./assets/img/actividadlaboral.webp" alt="" />
-          <h2>Actividades laborales</h2>
-          <p>
-            En lo que respecta a las actividades laborales de la población
-            otomí, el trabajo fue dividido entre hombres y mujeres. La actividad
-            de los hombres fue casi siempre la agricultura, en siembra temporal,
-            en algunas regiones cercana a la laguna se practico el riego por
-            medio de canales aunque con redes y salabre, y la fabricación de
-            esteras en zonas adecuadas para ello.
-          </p>
-          <a href="#">Ver mas</a>
-        </article>
-      </section> -->
 
+        <article class="card">
+          <picture>
+            <img src="./assets/img/actividadlaboral.webp" alt="">
+          </picture>
+          <div>
+            <h2 class="card__title">Actividades laborales</h2>
+            <p class="card__texto">
+              En lo que respecta a las actividades laborales de la población otomí, el trabajo fue dividido entre hombres y mujeres. La actividad de los hombres fue casi siempre la agricultura, en siembra temporal, en algunas regiones cercana a la laguna se practico el riego por medio de canales aunque con redes y salabre, y la fabricación de esteras en zonas adecuadas para ello.
+            </p>
+            <a href="" class="card__button">Ver más</a>
+          </div>
+        </article>
+      </section>
+      
     </main>
 
     <footer class="footer container">
-     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis explicabo aspernatur odio. Dolorem perferendis asperiores quas quasi reprehenderit natus soluta voluptatum porro dolores iure! Ducimus officiis doloribus nesciunt minus expedita.</p>
+      <p>
+        Proyecto echo por la comunidad y para la comunidad
+      </p>
     </footer>
   </body>
 </html>

@@ -9,8 +9,8 @@
     background-color: blue;
 
     .wrapper {
-      /* background-color: azure; */
-      width: 100%;
+      background-color: azure;
+      
       position: relative;
       background-color: pink;
       
@@ -69,7 +69,6 @@
               height: 100%;
               object-fit: cover;
               vertical-align: middle;
-              border: 0;
             }
           }
         }

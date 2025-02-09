@@ -5,7 +5,7 @@
   z-index: 10;
 
   .nav {
-    width: 100dvw;
+    width: 100%;
     background-color: var(--acento);
 
     .nav__container {

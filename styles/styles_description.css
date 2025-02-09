@@ -1,6 +1,6 @@
 .main {
   .main__description {
-    .article {
+    .description {
       display: grid;
       grid-template-rows: auto 240px;
       gap: 1.2rem;
@@ -38,7 +38,7 @@
 @media (width > 764px) {
   .main {
     .main__description {
-      .article {
+      .description {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 320px;
 
