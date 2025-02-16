@@ -2,7 +2,7 @@
   background-color: var(--acento);
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 1;
 
   .nav {
     width: 100%;
@@ -58,8 +58,10 @@
 
         .nav__link {
           color: var(--fondo-principal);
-          font-weight: 600;
+          font-weight: 700;
+          font-size: 2.4rem;
           text-decoration: none;
+
         }
       }
     }
@@ -87,7 +89,8 @@
 
           .nav__link {
             color: var(--fondo-principal);
-            font-weight: 600;
+            font-weight: 700;
+            font-size: 1.6rem;
           }
         }
       }

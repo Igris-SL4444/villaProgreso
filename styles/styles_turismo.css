@@ -1,0 +1,213 @@
+/*
+// Reglas para CSS
+1. Posicionamiento
+2. Modelo de caja (box model)
+3. Tipografia
+4. Visuales 'efecto visuales como el hover'
+5. Otras / Miselaneos
+
+// Breakpoints
+xs: 360px; // extra chico, extra small
+  // @media (width >= xs)
+sm: 640px; // chico, small
+  // @media (width >= sm)
+md: 768px; //mediano, medium
+  // @media (width >= md)
+lg: 1024px; // largo, large
+  // @media (width >= lg)
+xl: 1280px; // extra largo, extra large
+  // @media (width >= xl)
+2xl: 1536px; // 1440px doble extra largo
+  // @meia (width >= 2xl)
+*/
+
+/* varialble para colores */
+:root {
+  --xs: 360px;
+  --s: 640px;
+  --md: 768px;
+  --lg: 1024px;
+  --xl: 1280px;
+  --xxl: 1536px;
+
+  --fondo-principal: #1e1e1e;
+  --fondo-secundario: #2a2a2a; /*targetas, modales, elementos scuendarios*/
+  --text-color: #e0e0e0;
+  --acento: #f48fb1; /*botones, iconos, interactividad*/
+  --detalles: #c7748e;
+
+  --icon-toggle-menu: url("../assets/icons/menu/menu_black.svg");
+  --transform-menu-show: translate(-100%);
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../font/Lato/Lato-Black.ttf"),
+    url("../font/Lato/Lato-BlackItalic.ttf");
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../font/Lato/Lato-Bold.ttf"),
+    /*700*/ url("../font/Lato/Lato-BoldItalic.ttf"); /*700*/
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../font/Lato/Lato-Regular.ttf"),
+    /*400*/ url("../font/Lato/Lato-Italic.ttf"); /*400*/
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../font/Lato/Lato-Light.ttf"),
+    /*300*/ url("../font/Lato/Lato-LightItalic.ttf"); /*300*/
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 100;
+  src: url("../font/Lato/Lato-Thin.ttf"),
+    /*100*/ url("../font/Lato/Lato-ThinItalic.ttf"); /*100*/
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Lato", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 62.5%; /* 100% = 16px, (10 * 100) / 16 = 62.5% =>  1rem = 10px*/
+  /*100  === normal*/
+  /* scrollbar-color: var(--detalles) var(--fondo-principal); */
+  scrollbar-width: thin;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p {
+  text-wrap: pretty;
+  color: var(--text-color);
+}
+
+ul {
+  color: var(--text-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+  color: var(--text-color);
+}
+
+img,
+video,
+svg {
+  height: auto;
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+body {
+  min-height: 100dvh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+
+  background-color: var(--fondo-principal);
+  font-size: 1.6rem;
+}
+
+.container {
+  width: 100%;
+  min-width: 360px;
+  max-width: 1024px;
+  /* width: min(360px, 1024px); */
+  margin: 0 auto;
+}
+
+.main {
+  display: grid;
+  gap: 2rem;
+  background-color: var(--fondo-secundario);
+  padding: 2rem;
+
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    .content__figure,
+    .content__text {
+      width: 300px;
+      height: 300px;
+      flex-grow: 1;
+    }
+
+    .content__figure {
+      background-color: red;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .content__text {
+      display: grid;
+      align-content: start;
+
+      @media (width < 660px) {
+        height: auto;
+      }
+    }
+    &.reverse {
+      flex-direction: row-reverse;
+    }
+    &.reverse {
+      @media (width <= 660px) {
+        flex-wrap: wrap;
+      }
+    }
+  }
+}
+
+.footer {
+  height: 120px;
+  background-color: var(--detalles);
+  margin-top: 20px;
+
+  display: grid;
+  justify-content: center;
+  align-content: center;
+
+  p {
+    font-style: italic;
+    font-weight: 700;
+  }
+}
