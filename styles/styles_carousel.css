@@ -7,6 +7,8 @@
     justify-content: center;
 
     background-color: blue;
+    border-radius: var(--radio-borde);
+    overflow: hidden;
 
     .wrapper {
       background-color: azure;
