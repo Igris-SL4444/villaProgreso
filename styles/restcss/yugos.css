@@ -1,0 +1,92 @@
+.yugos__main {
+  container-type: inline-size;
+
+  .yugos_presentacion {
+    @container (width >= 720px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      place-content: center;
+      gap: 1rem;
+    }
+
+    .presentacion_picture {
+      img {
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+
+        @container (width >= 720px) {
+          height: 100%;
+        }
+      }
+    }
+    .presentacion_heattext {
+      padding: var(--espaciado-xs);
+
+      :nth-child(1) {
+        font-size: var(--tamano-fuente-xl);
+        font-style: italic;
+        color: var(--color-headline);
+      }
+
+      @container (width >= 720px) {
+        padding: unset;
+        align-self: center;
+      }
+    }
+  }
+
+  .yugos_inf {
+    color: white;
+
+    .inf {
+      display: grid;
+      gap: 1rem;
+
+      ul {
+        list-style: none;
+      }
+
+      @container (width >= 1024px) {
+        
+        grid-template-columns: 1fr 1fr 1fr;
+
+        picture {
+            width: 100%;
+            height: 100%;
+
+            img {
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+      }
+    }
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+
+  .gallery_rest {
+    display: flex;
+    width: 100%;
+    height: 430px;
+    
+    img {
+        width: 0px;
+        flex-grow: 1;
+        object-fit: cover;
+        opacity: .8;
+        transition: 0.5s ease;
+
+        &:hover {
+            cursor: crosshair;
+            width: 300px;
+            opacity: 1;
+            filter: contrast(120%);
+        }
+    }
+  }
+}
