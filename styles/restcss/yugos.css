@@ -2,13 +2,6 @@
   container-type: inline-size;
 
   .yugos_presentacion {
-    @container (width >= 720px) {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      place-content: center;
-      gap: 1rem;
-    }
-
     .presentacion_picture {
       img {
         width: 100%;
@@ -23,7 +16,7 @@
     .presentacion_heattext {
       padding: var(--espaciado-xs);
 
-      :nth-child(1) {
+      .presentacion_titulo {
         font-size: var(--tamano-fuente-xl);
         font-style: italic;
         color: var(--color-headline);
@@ -34,38 +27,61 @@
         align-self: center;
       }
     }
+
+    @container (width >= 720px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      place-content: center;
+      gap: 1rem;
+    }
   }
 
   .yugos_inf {
-    color: white;
-
     .inf {
       display: grid;
       gap: 1rem;
 
+      .inf_direc{
+        a {
+          color: var(--color-tertiary);
+          text-decoration: none;
+        }
+      }
+      .inf__horarios {
+        
+        ul {
+          text-align: center;
+        }
+      }
+
       ul {
         list-style: none;
+        color: var(--color-headline);
       }
 
       @container (width >= 1024px) {
-        
         grid-template-columns: 1fr 1fr 1fr;
 
-        picture {
+        button {
+          border: none;
+
+          figure {
             width: 100%;
-            height: 100%;
+            height: auto;
+            background-color: var(--color-primario);
 
             img {
-                height: 100%;
-                object-fit: cover;
-                object-position: center;
+              height: 100%;
+              object-fit: cover;
+              object-position: center;
             }
+            figcaption {
+              font-weight: bold;
+              color: var(--color-paragraph);
+            }
+          }
         }
       }
-    }
-    a {
-      text-decoration: none;
-      color: white;
     }
   }
 
@@ -73,20 +89,20 @@
     display: flex;
     width: 100%;
     height: 430px;
-    
-    img {
-        width: 0px;
-        flex-grow: 1;
-        object-fit: cover;
-        opacity: .8;
-        transition: 0.5s ease;
 
-        &:hover {
-            cursor: crosshair;
-            width: 300px;
-            opacity: 1;
-            filter: contrast(120%);
-        }
+    img {
+      width: 0px;
+      flex-grow: 1;
+      object-fit: cover;
+      opacity: 0.8;
+      transition: 0.5s ease;
+
+      &:hover {
+        cursor: crosshair;
+        width: 300px;
+        opacity: 1;
+        filter: contrast(120%);
+      }
     }
   }
 }

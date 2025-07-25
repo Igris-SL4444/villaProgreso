@@ -12,7 +12,7 @@
 
       border: 1px solid rgb(59, 67, 83);
 
-      picture {
+      figure {
         position: relative;
 
         img {
@@ -22,12 +22,13 @@
 
           mask-image: linear-gradient(black 88%, transparent);
         }
-        h3 {
+        figcaption {
           position: absolute;
           bottom: 20px;
           left: 20px;
           font-size: var(--tamano-fuente-grande);
-          color: white;
+          color: var(--color-headline);
+          font-weight: 700;
         }
       }
 
@@ -37,21 +38,25 @@
 
         padding: 0.4em 1.2em;
 
-        :not(p) {
-          font-weight: normal;
-        }
-
-        :is(p, a) {
-          font-weight: 700;
-        }
-        :nth-child(3) {
+        .desc {
           overflow: hidden;
           display: -webkit-box;
           -webkit-box-orient: vertical;
           -webkit-line-clamp: 3;
         }
 
+        :is(p) {
+          color: var(--color-headline);
+        }
+        :is(span) {
+          color: var(--color-paragraph);
+        }
+        :is(a) {
+          color: var(--color-tertiary);
+        }
+
         .btn-yugos {
+          color: var(--color-headline);
           margin-top: 8px;
           justify-self: end;
           font-size: var(--tamano-fuente-peq);
