@@ -1,0 +1,116 @@
+.rest__main {
+  container-type: inline-size;
+
+  .rest_presentacion {
+    .presentacion_picture {
+      img {
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+
+        @container (width >= 720px) {
+          height: 100%;
+        }
+      }
+    }
+    .presentacion_heattext {
+      padding: var(--espaciado-xs);
+
+      .presentacion_titulo {
+        font-size: var(--tamano-fuente-xl);
+        font-style: italic;
+        color: var(--color-headline);
+      }
+
+      @container (width >= 720px) {
+        padding: unset;
+        align-self: center;
+      }
+    }
+
+    @container (width >= 720px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      place-content: center;
+      gap: 1rem;
+    }
+  }
+
+  .rest_inf {
+    .inf__container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1rem;
+
+      .inf__horario {
+        /* background-color: red; */
+      }
+      .inf__direction {
+        /* background-color: blueviolet; */
+      }
+
+      .button-modal {
+        background-color: unset;
+        border: none;
+        .inf__reference {
+          background-color: var(--color-tertiary);
+        }
+      }
+      .inf__services {
+        /* background-color: bisque; */
+        color: var(--color-paragraph);
+      }
+      .inf__contacto {
+        /* background-color: cadetblue; */
+      }
+      .inf__pay {
+        /* background-color: violet; */
+      }
+
+      .infp {
+        color: var(--color-paragraph);
+        font-size: var(--tamano-fuente-peq);
+      }
+
+      .inf__title {
+        color: var(--color-headline);
+        font-weight: 700;
+      }
+      .inf__ul {
+        list-style: none;
+      }
+      .inf__direction-link {
+        color: var(--color-button);
+        font-size: var(--tamano-fuente-peq);
+        text-decoration: none;
+      }
+      .inf__notification {
+        color: var(--color-tertiary);
+      }
+      .spanCP {
+        color: var(--color-paragraph);
+      }
+    }
+  }
+
+  .gallery_rest {
+    display: flex;
+    width: 100%;
+    height: 430px;
+
+    img {
+      width: 0px;
+      flex-grow: 1;
+      object-fit: cover;
+      opacity: 0.8;
+      transition: 0.5s ease;
+
+      &:hover {
+        cursor: crosshair;
+        width: 300px;
+        opacity: 1;
+        filter: contrast(120%);
+      }
+    }
+  }
+}

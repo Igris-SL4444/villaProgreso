@@ -43,8 +43,9 @@
 
     <link rel="stylesheet" href="../styles/styles.css" />
     <link rel="stylesheet" href="../styles/menu.css" />
-    <link rel="stylesheet" href="../styles/restcss/yugos.css" />
+    <link rel="stylesheet" href="../styles/blade.css" />
     <link rel="stylesheet" href="../styles/modal.css" />
+    <link rel="stylesheet" href="../styles/bento.css">
 
     <!-- <link rel="stylesheet" href="./css/tablet.css" media="screen and (min-width: 600px)"> -->
     <!--media=s"creen and (width >= 600px)"-->
@@ -90,11 +91,11 @@
       </nav>
     </header>
 
-    <main class="yugos__main container">
-      <section class="yugos_presentacion">
+    <main class="rest__main container">
+      <section class="rest_presentacion">
         <figure class="presentacion_picture">
           <img
-            src="../rest/yImg/yugosPortada.webp"
+            src="./yugos/img/yugosPortada.webp"
             alt="aqui va la imagen de portada"
           />
         </figure>
@@ -112,11 +113,11 @@
         </article>
       </section>
 
-      <section class="yugos_inf">
-        <article class="inf">
-          <section class="inf__horarios">
-            <p>Horario</p>
-            <ul>
+      <section class="rest_inf">
+        <article class="inf__container">
+          <section class="inf__horario infp">
+            <p class="inf__title">Horario</p>
+            <ul class="inf__ul">
               <li>Domingo - CERRADO</li>
               <li>Lunes - 8:00 a.m. a 4:00 p.m.</li>
               <li>Martes - 8:00 a.m. a 4:00 p.m.</li>
@@ -127,28 +128,28 @@
             </ul>
           </section>
 
-          <section class="inf_direc">
-            <p>Direccion</p>
-            <p>
-              <a
-                href="https://maps.app.goo.gl/U7brvVsX4PYtTFhP7"
-                target="_blank"
-              >
-                Joaquin Capilla y Fidel Ortiz con incorporacion Calle Ezequiel
-                Montes ah Villa Progreso. Link.
-              </a>
-            </p>
+          <section class="inf__direction">
+            <p class="inf__title">Direccion</p>
+
+            <a
+              href="https://maps.app.goo.gl/U7brvVsX4PYtTFhP7"
+              target="_blank"
+              class="inf__direction-link"
+            >
+              Link. Joaquin Capilla y Fidel Ortiz con incorporacion Calle
+              Ezequiel Montes ah Villa Progreso.
+            </a>
           </section>
 
-          <button id="openModal">
-            <figure>
-              <img src="./yImg/yugosMap.webp" alt="mapa los yugos" />
+          <button id="openModal" class="button-modal openModal">
+            <figure class="inf__reference">
+              <img src="./yugos/img/yugosMap.webp" alt="mapa los yugos" />
               <figcaption>Imagen de Referencia</figcaption>
             </figure>
           </button>
-          <dialog id="myModal" closedby="any" class="modal">
+          <dialog id="myModal" closedby="any" class="modal myModal">
             <div>
-              <img src="./yImg/yugosMap.webp" alt="imagen del modal" />
+              <img src="./yugos/img/yugosMap.webp" alt="imagen del modal" />
               <!-- <h2>Initial D</h2>
               <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio
@@ -161,44 +162,44 @@
               </form>
             </div>
           </dialog>
-        </article>
-      </section>
 
-      <section class="yugos_inf">
-        <article class="inf">
-          <section class="inf_direc">
-            <p>Servicios</p>
-            <p>Servicio de comida en el establecimiento.</p>
-            <p>Reservaciones para Cocina Tradicional.</p>
-            <p>Reservaciones para eventos banquete.</p>
-            <p>Ordena por telefono y recoge.</p>
+          <section class="inf__services infp">
+            <p class="inf__title">Servicios</p>
+
+            <ul class="inf__ul">
+              <li>Servicio de comida en el establecimiento</li>
+              <li>Reservaciones para Cocina Tradicional</li>
+
+              <li>Reservaciones para eventos banquete</li>
+
+              <li>Ordena por telefono y recoge</li>
+            </ul>
           </section>
 
-          <section class="inf_direc">
-            <p>Direccion</p>
-            <p>
-              <a
-                href="https://maps.app.goo.gl/anavFNyQWGMB5S6z9"
-                target="_blank"
-              >
-                Cocina Tradicional "Los Yugos" Sta Maria, 76670 Villa Progreso,
-                Qro. Link.
-              </a>
-            </p>
-            <p>
-              Solo por reservacion actualmente.
-            </p>
+          <section class="inf__direction">
+            <p class="inf__title">Direccion</p>
+
+            <a
+              href="https://maps.app.goo.gl/anavFNyQWGMB5S6z9"
+              target="_blank"
+              class="inf__direction-link"
+            >
+              Link. Cocina Tradicional "Los Yugos" Sta Maria, 76670 Villa
+              Progreso, Qro.
+            </a>
+
+            <p class="inf__notification">Solo por reservacion actualmente.</p>
           </section>
 
-          <button id="openModal">
-            <figure>
-              <img src="./yImg/yugosMap.webp" alt="mapa los yugos" />
+          <button id="openModal" class="button-modal openModal">
+            <figure class="inf__reference">
+              <img src="./yugos/img/yugosMap.webp" alt="mapa los yugos" />
               <figcaption>Imagen de Referencia</figcaption>
             </figure>
           </button>
-          <dialog id="myModal" closedby="any" class="modal">
+          <dialog id="myModal" closedby="any" class="modal myModal">
             <div>
-              <img src="./yImg/yugosMap.webp" alt="imagen del modal" />
+              <img src="./yugos/img/yugosMap.webp" alt="imagen del modal" />
               <!-- <h2>Initial D</h2>
               <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio
@@ -211,34 +212,45 @@
               </form>
             </div>
           </dialog>
+
+          <section class="inf__contacto">
+            <p class="inf__title">Contacto</p>
+            <p class="infp inf__notification">
+              Solo WhatsApp: <b><span class="spanCP"> 441 106 0718 </span></b>
+            </p>
+          </section>
+
+          <section class="inf__pay infp">
+            <p class="inf__title">Formas de pago</p>
+            <ul class="inf__ul">
+              <li>Efectivo</li>
+              <li>Transferencia</li>
+            </ul>
+          </section>
         </article>
       </section>
 
-      <section class="yugos_inf">
-        <article class="inf">
-          
-
-          <section>
-            <p>Contacto</p>
-            <p>Solo WhatsApp: <b>441 106 0718</b></p>
-          </section>
-
-          <section>
-            <p>Formas de pago</p>
-            <p>Efectivo.</p>
-            <p>Transferecia.</p>
-          </section>
-
-         
-        </article>
-      </section>
-
-      <section class="gallery_rest">
-        <img src="./yImg/gy01.jpg" alt="" />
-        <img src="./yImg/gy02.jpg" alt="" />
-        <img src="./yImg/gy03.jpg" alt="" />
-        <img src="./yImg/gy04.jpg" alt="" />
-        <img src="./yImg/gy05.jpg" alt="" />
+      <section class="bento">
+        <div class="bento-grid">
+          <div class="item item-1">
+            <img src="../rest/yugos/img/gy01.jpg" alt="Imagen 1" />
+          </div>
+          <div class="item item-2">
+            <img src="../rest/yugos/img/gy02.jpg" alt="Imagen 2" />
+          </div>
+          <div class="item item-3">
+            <img src="../rest/yugos/img/gy03.jpg" alt="Imagen 3" />
+          </div>
+          <div class="item item-4">
+            <img src="../rest/yugos/img/gy04.jpg" alt="Imagen 4" />
+          </div>
+          <div class="item item-5">
+            <img src="../rest/yugos/img/gy05.jpg" alt="Imagen 5" />
+          </div>
+          <div class="item item-6">
+            <img src="../rest/yugos/img/gy01.jpg" alt="Imagen 6" />
+          </div>
+        </div>
       </section>
     </main>
 

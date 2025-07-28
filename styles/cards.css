@@ -12,17 +12,16 @@
 
       border: 1px solid rgb(59, 67, 83);
 
-      figure {
+      .card__figure {
         position: relative;
 
         img {
-          width: 100%;
           object-fit: cover;
           object-position: center;
 
           mask-image: linear-gradient(black 88%, transparent);
         }
-        figcaption {
+        .card__figcaption {
           position: absolute;
           bottom: 20px;
           left: 20px;
@@ -32,34 +31,33 @@
         }
       }
 
-      div {
+      .card__text__container {
         display: grid;
-        gap: 0.1rem;
+        gap: 0.4rem;
 
         padding: 0.4em 1.2em;
 
-        .desc {
+        .card__text {
+          font-weight: 700;
+        }
+
+        .card__text__span {
+          color: var(--color-paragraph);
+          font-weight: normal;
+        }
+
+        .lines {
           overflow: hidden;
           display: -webkit-box;
           -webkit-box-orient: vertical;
-          -webkit-line-clamp: 3;
+          -webkit-line-clamp: 4;
         }
 
-        :is(p) {
-          color: var(--color-headline);
-        }
-        :is(span) {
-          color: var(--color-paragraph);
-        }
-        :is(a) {
-          color: var(--color-tertiary);
-        }
-
-        .btn-yugos {
-          color: var(--color-headline);
-          margin-top: 8px;
-          justify-self: end;
-          font-size: var(--tamano-fuente-peq);
+        .card__buttons {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          justify-content: space-between;
+          gap: 1rem;
         }
       }
     }

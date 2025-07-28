@@ -218,4 +218,17 @@ main {
   color: var(--color-button-text);
   align-self: center;
   text-decoration: none;
+  text-align: center;
+}
+
+.btn-secundary {
+  font-size: var(--tamano-fuente-base);
+  font-weight: bold;
+  padding: 0.4em 1em;
+  border-radius: var(--radio-borde);
+  border: solid 2px var(--color-button);
+  color: var(--color-button-text);
+  align-self: center;
+  text-decoration: none;
+  text-align: center;
 }
