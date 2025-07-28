@@ -69,7 +69,7 @@
 
       .infp {
         color: var(--color-paragraph);
-        font-size: var(--tamano-fuente-peq);
+        font-size: var(--tamano-fuente-base);
       }
 
       .inf__title {
@@ -81,7 +81,7 @@
       }
       .inf__direction-link {
         color: var(--color-button);
-        font-size: var(--tamano-fuente-peq);
+        font-size: var(--tamano-fuente-base);
         text-decoration: none;
       }
       .inf__notification {
