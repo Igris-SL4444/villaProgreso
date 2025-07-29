@@ -5,7 +5,8 @@
     .presentacion_picture {
       img {
         width: 100%;
-        object-fit: cover;
+        object-fit: contain;
+        /* object-fit: cover; */
         object-position: center;
 
         @container (width >= 720px) {
@@ -14,12 +15,17 @@
       }
     }
     .presentacion_heattext {
-      padding: var(--espaciado-xs);
+      /* padding: var(--espaciado-xs); */
 
       .presentacion_titulo {
         font-size: var(--tamano-fuente-xl);
         font-style: italic;
         color: var(--color-headline);
+        text-align: center;
+
+        @container (width >= 720px) {
+          text-align: unset;
+        }
       }
 
       @container (width >= 720px) {
@@ -90,26 +96,14 @@
       .spanCP {
         color: var(--color-paragraph);
       }
-    }
-  }
+      .icon-location {
+        width: 24px;
+        height: 24px;
+        object-fit: cover;
+        object-position: center;
+        display: inline-block;
 
-  .gallery_rest {
-    display: flex;
-    width: 100%;
-    height: 430px;
-
-    img {
-      width: 0px;
-      flex-grow: 1;
-      object-fit: cover;
-      opacity: 0.8;
-      transition: 0.5s ease;
-
-      &:hover {
-        cursor: crosshair;
-        width: 300px;
-        opacity: 1;
-        filter: contrast(120%);
+        fill: var(--color-tertiary);
       }
     }
   }
