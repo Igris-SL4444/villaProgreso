@@ -232,3 +232,8 @@ main {
   text-decoration: none;
   text-align: center;
 }
+
+.desabled {
+  pointer-events: none;
+  opacity: 0.6;
+}
