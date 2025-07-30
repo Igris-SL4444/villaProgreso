@@ -6,15 +6,15 @@
     align-items: center;
     justify-content: center;
 
-    background-color: blue;
+    /* background-color: blue; */
     border-radius: var(--radio-borde);
     overflow: hidden;
 
     .wrapper {
-      background-color: azure;
+      /* background-color: azure; */
       
       position: relative;
-      background-color: pink;
+      /* background-color: pink; */
       
       .i {
         width: 48px;
