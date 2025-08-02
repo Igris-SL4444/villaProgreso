@@ -5,8 +5,8 @@
     .presentacion_picture {
       img {
         width: 100%;
-        object-fit: contain;
-        /* object-fit: cover; */
+        /* object-fit: contain; */
+        object-fit: cover;
         object-position: center;
 
         @container (width >= 720px) {
@@ -50,6 +50,17 @@
 
       .inf__horario {
         /* background-color: red; */
+
+        .horario__table {
+          @container (width < 720px) {
+            display: grid;
+            place-self: center;
+          }
+
+          .dias {
+            text-align: right;
+          }
+        }
       }
       .inf__direction {
         /* background-color: blueviolet; */
