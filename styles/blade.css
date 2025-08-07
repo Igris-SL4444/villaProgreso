@@ -79,6 +79,44 @@
       }
       .inf__contacto {
         /* background-color: cadetblue; */
+
+        .icon_contacto {
+          display: flex;
+          gap: 1em;
+
+          .ico-back {
+            background-color: rgb(230, 222, 222);
+            display: grid;
+            place-items: center;
+            padding: 0.1em;
+            border-radius: 50%;
+          }
+
+          .ico-face {
+            width: 32px;
+            height: 32px;
+            object-fit: cover;
+            object-position: center;
+            display: inline-block;
+            fill: hsl(217, 94%, 46%);
+          }
+          .ico-insta {
+            width: 32px;
+            height: 32px;
+            object-fit: cover;
+            object-position: center;
+            display: inline-block;
+            fill: hsl(345, 76%, 47%);
+          }
+          .ico-whats {
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
+            object-position: center;
+            display: inline-block;
+            fill: hsl(142, 70%, 49%);
+          }
+        }
       }
       .inf__pay {
         /* background-color: violet; */
