@@ -30,6 +30,19 @@
           color: var(--color-headline);
           font-weight: 700;
         }
+        .event-there {
+          position: absolute;
+          top: 0;
+          left: 0;
+          padding: 0.4em;
+
+          font-size: var(--tamano-fuente-peq);
+          font-weight: 600;
+          color: hsl(360, 75%, 62%);
+          background-color: hsl(41, 92%, 90%);
+          width: 100%;
+          text-decoration: none;
+        }
       }
 
       .card__text__container {
