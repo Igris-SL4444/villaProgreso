@@ -24,7 +24,7 @@
         }
         .card__figcaption {
           position: absolute;
-          bottom: 20px;
+          bottom: 8px;
           left: 20px;
           font-size: var(--tamano-fuente-grande);
           color: var(--color-headline);
