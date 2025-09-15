@@ -20,6 +20,9 @@
 }
 
 .dias {
+  display: grid;
+  gap: 3.2em;
+
   .dia {
     .dia__title {
       font-size: var(--tamano-fuente-grande);
