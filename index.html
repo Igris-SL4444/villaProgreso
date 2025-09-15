@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Villa Progreso</title>
+
+    <link rel="stylesheet" href="./styles/styles.css" />
+
+    <link
+      rel="icon"
+      sizes="16x16 32x32 48x48"
+      type="image/x-icon"
+      href="./assets/villaprogreso/ico/vpfav.ico"
+    />
+
+    <link rel="canonical" href="https://www.villaprogreso.com" />
+
+    <meta
+      name="description"
+      content="Villa Progreso, Pueblo magico perteneciente a la zona del semi decierto del estado de Queretaro. Lugar lleno de cultura y tradición, lleno de lugares gastronomicos, artesanales en ixtle y maguey."
+    />
+
+    <meta name="robots" content="Index, content" />
+    <!-- <meta name="robots" content="Index, follow"> -->
+
+    <meta name="theme-color" content="#226DAA" />
+
+    <!-- open graph -->
+    <meta property="og:title" content="Villa Progreso" />
+    <meta
+      property="og:description"
+      content="Villa Progreso, Pueblo magico perteneciente a la zona del semi decierto del estado de Queretaro. Lugar lleno de cultura y tradición, lleno de lugares gastronomicos, artesanales en ixtle y maguey."
+    />
+    <meta
+      property="og:image"
+      content="https://villaprogreso.com/assets/villaprogreso/letras169.webp"
+    />
+    <meta
+      property="og:image:alt"
+      content="Foto de Villa Progreso, ixtle, maguey y parroquia sanmiguel arcangel"
+    />
+
+    <!-- <script defer src="js.js"></script> -->
+
+    <link rel="stylesheet" href="./styles/menu.css" />
+    <link rel="stylesheet" href="./styles/carousel.css" />
+    <link rel="stylesheet" href="./styles/invitacion.css" />
+    <link rel="stylesheet" href="./styles/cards.css" />
+
+    <!-- <link rel="stylesheet" href="./css/tablet.css" media="screen and (min-width: 600px)"> -->
+    <!--media=s"creen and (width >= 600px)"-->
+
+    <script defer src="./js/carousel.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav container">
+        <label for="" class="icox"></label>
+
+        <figure class="nav__figure">
+          <a href="./index.html">
+            <img
+              src="./assets/villaprogreso/ico/logoVilla.svg"
+              alt=""
+              class="nav__logo"
+            />
+          </a>
+        </figure>
+
+        <label class="nav__toggle">
+          <input type="checkbox" id="menu-input" class="nav__input" />
+        </label>
+
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="./fiestaSanmiguelArcangel.html" class="nav__link">
+              Eventos
+            </a>
+          </li>
+
+          <li class="nav__item">
+            <a href="" class="nav__link desabled"> Gastronomía</a>
+          </li>
+
+          <li class="nav__item">
+            <a href="#" class="nav__link desabled"> Artesanía</a>
+          </li>
+
+          <li class="nav__item">
+            <a href="#" class="nav__link desabled"> Cultura </a>
+          </li>
+
+          <li class="nav__item">
+            <a href="" class="nav__link desabled"> Hospedaje </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main container">
+      <section class="section__carousel">
+        <div class="wrapper">
+          <img
+            src="./assets/carousel/icons/arrow-left.png"
+            alt=""
+            class="i left"
+            id="left"
+          />
+
+          <ul class="carousel">
+            <li class="card">
+              <div class="img">
+                <a href="./fiestaSanmiguelArcangel.html" target="_blank">
+                  <img
+                    src="./assets/carousel/eventos/fiestaSanMiguelArcangel209.png"
+                    alt=""
+                    draggable="false"
+                    style="
+                      width: 100%;
+                      height: 100%;
+                      object-fit: contain;
+                      object-position: center;
+                    "
+                  />
+                </a>
+              </div>
+            </li>
+
+            <li class="card">
+              <div class="img">
+                <a href="#">
+                  <picture>
+                    <source
+                      media="(min-width:1020px)"
+                      srcset="./assets/carousel/anunciate/anuncio1024.webp"
+                    />
+
+                    <source
+                      media="(min-width:760px)"
+                      srcset="./assets/carousel/anunciate/anuncio768.webp"
+                    />
+
+                    <source
+                      media="(min-width:640px)"
+                      srcset="./assets/carousel/anunciate/anuncio640.webp"
+                    />
+
+                    <img
+                      src="./assets/carousel/anunciate/anuncio360.webp"
+                      alt="Aqui puedes anunciarte"
+                      draggable="false"
+                    />
+                  </picture>
+                </a>
+              </div>
+            </li>
+          </ul>
+
+          <img
+            src="./assets/carousel/icons/arrow-right.png"
+            alt=""
+            class="i righ"
+            id="right"
+          />
+        </div>
+      </section>
+
+      <section class="invitacion">
+        <article class="invitacion__article">
+          <h1>
+            San Miguel de las Tetillas, <br />
+            hoy Villa Progreso
+          </h1>
+          <p>
+            Donde el tiempo camina con calma y las tradiciones se mezclan entre
+            lo sagrado y lo cotidiano
+          </p>
+
+          <p>
+            En el corazón de Querétaro, a tan sólo 30 minutos de Bernal, se
+            encuentra un lugar donde la historia no está en los libros sino en
+            las calles empedradas, las manos de los artesanos y los sabores de
+            las fiestas patronales.
+          </p>
+
+          <a href="./conocenos.html" class="btn-primary"> Conocenos... </a>
+        </article>
+        <figure class="invitacion__picture">
+          <img
+            src="./assets/villaprogreso/parroquia43.webp"
+            alt="auqi va una imagen"
+            class="invitacion__img"
+          />
+        </figure>
+      </section>
+
+      <section class="cards__main">
+        <div class="cards__container">
+          <!-- la Luna 'da -->
+          <article class="card">
+            <a href="./gastronomia/laLunada.html" class="card--link">
+              <figure class="card__figure">
+                <img src="./gastronomia/laLunada/lld01.webp" alt="" />
+
+                <figcaption class="card__figcaption">
+                  LUNA"da sports bar & grill
+                </figcaption>
+                <p class="category__fc">Gastronomía</p>
+              </figure>
+              <div class="card__text__container">
+                <p class="category">Gastronomía</p>
+
+                <p class="card__text__span lines">
+                  Somos un Restaurante/Bar independiente, estamos orgullosos de
+                  ser un establecimiento tan versátil. Contamos con una amplia
+                  selección de platillos y bebidas. No dudes en visitarnos.
+                </p>
+              </div>
+            </a>
+
+            <div class="card__buttons">
+              <a
+                href="https://maps.app.goo.gl/YqYnYjipiBru1Eoi9"
+                target="_blank"
+                class="btn-card-secundary btn"
+              >
+                Comó llegar
+              </a>
+
+              <a
+                href="./gastronomia/laLunada.html"
+                class="btn-card-primary btn"
+              >
+                Ver más
+              </a>
+            </div>
+          </article>
+
+          <!-- la Buguette -->
+          <article class="card">
+            <a href="./gastronomia/laBuguette.html" class="card--link">
+              <figure class="card__figure">
+                <img src="./gastronomia/laBuguette/lb01.webp" alt="" />
+
+                <figcaption class="card__figcaption">La Buguette</figcaption>
+                <p class="category__fc">Gastronomía</p>
+              </figure>
+              <div class="card__text__container">
+                <p class="category">Gastronomía</p>
+
+                <p class="card__text__span lines">
+                  Un lugar para disfrutar, compartir y saborear momentos únicos.
+                  ¡¡Bienvenidos!!
+                </p>
+              </div>
+            </a>
+
+            <div class="card__buttons">
+              <a
+                href="https://maps.app.goo.gl/FmpTKEu6FUBRHVbZ7"
+                target="_blank"
+                class="btn-card-secundary btn"
+              >
+                Comó llegar
+              </a>
+
+              <a
+                href="./gastronomia/laBuguette.html"
+                class="btn-card-primary btn"
+              >
+                Ver más
+              </a>
+            </div>
+          </article>
+
+          <!-- pastas Dell 'Angelo -->
+          <article class="card">
+            <a href="./gastronomia/dellAngelo.html" class="card--link">
+              <figure class="card__figure">
+                <img src="./gastronomia/dellAngelo/cdalogo.webp" alt="" />
+
+                <figcaption class="card__figcaption">
+                  Pastas Dell 'Angelo
+                </figcaption>
+                <p class="category__fc">Gastronomía</p>
+              </figure>
+              <div class="card__text__container">
+                <p class="category">Gastronomía</p>
+
+                <p class="card__text__span lines">
+                  En el corazón de Villa Progreso, fusionamos lo mejor de la
+                  cocina italiana y oriental para ofrecerte una experiencia
+                  única. Disfruta desde pastas, arroz frito y más, todo en un
+                  ambiente acogedor y familiar. ¡Ven y déjate sorprender por los
+                  sabores del mundo!
+                </p>
+              </div>
+            </a>
+
+            <div class="card__buttons">
+              <a
+                href="https://maps.app.goo.gl/3WyGg6VbJYJTY5Vo8"
+                target="_blank"
+                class="btn-card-secundary btn"
+              >
+                Comó llegar
+              </a>
+
+              <a
+                href="./gastronomia/dellAngelo.html"
+                class="btn-card-primary btn"
+              >
+                Ver más
+              </a>
+            </div>
+          </article>
+
+          <!-- el Mirador -->
+          <article class="card">
+            <a href="./gastronomia/elMirador.html" class="card--link">
+              <figure class="card__figure">
+                <img src="./gastronomia/elMirador/emlcentro.webp" alt="" />
+
+                <figcaption class="card__figcaption">El Mirador</figcaption>
+                <p class="category__fc">Gastronomía</p>
+              </figure>
+              <div class="card__text__container">
+                <p class="category">Gastronomía</p>
+
+                <p class="card__text__span lines">
+                  Ubicado en lo alto de Villa Progreso, El Mirador es el lugar
+                  donde el sabor se une con la mejor vista del pueblo. Disfruta
+                  de nuestras pastas artesanales, cortes de carne jugosos,
+                  pizzas al horno y refrescantes bebidas, mientras contemplas un
+                  paisaje único que te enamorará. Ven y vive 'Una vista de
+                  tetillas para deleitar'.
+                </p>
+              </div>
+            </a>
+
+            <div class="card__buttons">
+              <a
+                href="https://maps.app.goo.gl/1ybiRi67thZ9RsF89"
+                target="_blank"
+                class="btn-card-secundary btn"
+              >
+                Comó llegar
+              </a>
+
+              <a
+                href="./gastronomia/elMirador.html"
+                class="btn-card-primary btn"
+              >
+                Ver más
+              </a>
+            </div>
+          </article>
+
+          <!-- Restaurante “La chiingada” -->
+          <article class="card">
+            <a href="./gastronomia/laChingada.html" class="card--link">
+              <figure class="card__figure">
+                <img src="./gastronomia/laChingada/lc01.webp" alt="" />
+
+                <figcaption class="card__figcaption">
+                  Restaurante “La chiingada”
+                </figcaption>
+                <p class="category__fc">Gastronomía</p>
+              </figure>
+              <div class="card__text__container">
+                <p class="category">Gastronomía</p>
+
+                <p class="card__text__span lines">
+                  “A todos nos han mandado alguna vez a la Ch¡ngada. Ahora ya
+                  sabes que venden comida exquisita y una vista sin igual. Un
+                  concepto único así como el sazón.”
+                </p>
+              </div>
+            </a>
+
+            <div class="card__buttons">
+              <a
+                href="https://maps.app.goo.gl/gmJ7ibFRWQPC9jTUA"
+                target="_blank"
+                class="btn-card-secundary btn"
+              >
+                Comó llegar
+              </a>
+
+              <a
+                href="./gastronomia/laChingada.html"
+                class="btn-card-primary btn"
+              >
+                Ver más
+              </a>
+            </div>
+          </article>
+
+          <!-- los Remolcados -->
+          <article class="card">
+            <a href="./gastronomia/losRemolcados.html" class="card--link">
+              <figure class="card__figure">
+                <img src="./gastronomia/losRemolcados/lr01.webp" alt="" />
+
+                <figcaption class="card__figcaption">
+                  Barbacoa Los Remolcados
+                </figcaption>
+                <p class="category__fc">Gastronomía</p>
+              </figure>
+              <div class="card__text__container">
+                <p class="category">Gastronomía</p>
+
+                <p class="card__text__span lines">
+                  En Los Remolcados, la barbacoa no solo se cuece bajo tierra,
+                  se cuece con tiempo, herencia y amor. Cada bocado es un
+                  susurro de los abuelos, un eco humeante de las madrugadas de
+                  domingo. Cocinamos para compartir, para reunir, para celebrar.
+                  También llevamos el sabor hasta tu mesa.
+                </p>
+              </div>
+            </a>
+
+            <div class="card__buttons">
+              <a
+                href="https://maps.app.goo.gl/9jHkiJTRdJJL4L1Q6"
+                target="_blank"
+                class="btn-card-secundary btn"
+              >
+                Comó llegar
+              </a>
+
+              <a
+                href="./gastronomia/losRemolcados.html"
+                class="btn-card-primary btn"
+              >
+                Ver más
+              </a>
+            </div>
+          </article>
+
+          <!-- ket-Napuchino -->
+          <article class="card">
+            <a href="./gastronomia/ketNapuchino.html" class="card--link">
+              <figure class="card__figure">
+                <img src="./gastronomia/ketNapuchino/kn01.webp" alt="" />
+
+                <figcaption class="card__figcaption">Ket-Napuchino</figcaption>
+                <p class="category__fc">Gastronomía</p>
+              </figure>
+              <div class="card__text__container">
+                <p class="category">Gastronomía</p>
+
+                <p class="card__text__span lines">
+                  Bienvenidos a ket-Napuchino, el nuevo sabor de Oriente en
+                  Villa Progreso. En nuestro local encontrarás una experiencia
+                  culinaria auténtica con los sabores clásicos de la comida
+                  oriental: sushi fresco, ramen tradicional, arroz frito al wok
+                  y más platillos que te harán viajar sin salir de casa. Pero en
+                  ket-Napuchino no nos quedamos ahí: Pronto iniciaremos una
+                  propuesta única en la región, fusionando lo mejor de la cocina
+                  oriental con el inconfundible sabor mexicano.
+                </p>
+              </div>
+            </a>
+
+            <div class="card__buttons">
+              <a
+                href="https://maps.app.goo.gl/Z9stx4shYhFq1jr29"
+                target="_blank"
+                class="btn-card-secundary btn"
+              >
+                Comó llegar
+              </a>
+
+              <a
+                href="./gastronomia/ketNapuchino.html"
+                class="btn-card-primary btn"
+              >
+                Ver más
+              </a>
+            </div>
+          </article>
+
+          <!-- la Luna 'da -->
+          <!-- <article class="card">
+            <a href="./gastronomia/laLunada.html" class="card--link">
+              <figure class="card__figure">
+                <img src="./gastronomia/laLunada/lld01.webp" alt="" />
+
+                <figcaption class="card__figcaption">
+                  LUNA"da sports bar & grill
+                </figcaption>
+                <p class="category__fc">Gastronomía</p>
+              </figure>
+              <div class="card__text__container">
+                <p class="category">Gastronomía</p>
+
+                <p class="card__text__span lines">
+                  Somos un Restaurante/Bar independiente, estamos orgullosos de
+                  ser un establecimiento tan versátil. Contamos con una amplia
+                  selección de platillos y bebidas. No dudes en visitarnos.
+                </p>
+              </div>
+            </a>
+
+            <div class="card__buttons">
+              <a
+                href="https://maps.app.goo.gl/YqYnYjipiBru1Eoi9"
+                target="_blank"
+                class="btn-card-secundary btn"
+              >
+                Comó llegar
+              </a>
+
+              <a
+                href="./gastronomia/lalunada.html"
+                class="btn-card-primary btn"
+              >
+                Ver más
+              </a>
+            </div>
+          </article> -->
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer container">
+      <p>Proyecto impulsado por la comunidad.</p>
+    </footer>
+  </body>
+</html>

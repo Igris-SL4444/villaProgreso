@@ -1,0 +1,78 @@
+.conocenos__main {
+  width: 100%;
+  container-type: inline-size;
+
+  .imgsBack {
+    @container (width >= 1024px) {
+      position: relative;
+
+      display: grid;
+      justify-items: center;
+
+      margin-bottom: 280px;
+    }
+    @container (width >= 1024px) {
+      margin-bottom: 320px;
+    }
+
+    .imgBack {
+      display: none;
+      overflow: hidden;
+
+      @container (width >= 1024px) {
+        display: block;
+
+        height: 400px;
+
+        .imgbase {
+          filter: blur(1.4rem);
+          scale: 1.1;
+        }
+      }
+    }
+
+    .imgfront {
+      @container (width >= 1024px) {
+        position: absolute;
+        width: 80%;
+        top: 180px;
+        /* background-color: red; */
+
+        img {
+          aspect-ratio: 16 / 9;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+    }
+  }
+
+  .conocenos_article {
+    display: grid;
+    gap: 1rem;
+
+    :nth-child(1) {
+      font-size: var(--tamano-fuente-xl);
+      color: oklch(0.66 0.19 4.98);
+      text-align: center;
+      font-style: italic;
+    }
+    :nth-child(3) {
+      font-size: var(--tamano-fuente-grande);
+      font-style: italic;
+      color: var(--color-tertiary);
+      text-align: center;
+    }
+    /* :nth-child(4) {
+      font-style: italic;
+    }
+    :is(p) {
+      color: var(--color-paragraph);
+      padding: 0 1.28em;
+
+      @container (width >= 1024px) {
+        padding: 0 8em;
+      }
+    } */
+  }
+}
