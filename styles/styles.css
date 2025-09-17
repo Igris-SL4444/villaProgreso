@@ -169,7 +169,7 @@ main {
   padding: 0.4em 1em;
   border-radius: var(--radio-borde);
   background-color: var(--color-orange);
-  color: var(--color-button-text);
+  color: var(--color-white);
   align-self: center;
   text-decoration: none;
   text-align: center;
