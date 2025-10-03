@@ -1,51 +1,63 @@
-.cont {
-  width: 80%;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 10fr 2fr;
-  gap: 1.6em;
-
-  @media (width <= 750px) {
-    grid-template-columns: 1fr;
-  }
-
-  figure {
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      object-position: center;
-    }
-  }
+.body {
+  background-color: oklch(0.18 0 0);
 }
 
-.dias {
-  display: grid;
-  gap: 3.2em;
-
-  .dia {
-    .dia__title {
-      font-size: var(--tamano-fuente-grande);
-      text-align: center;
-      font-weight: 700;
-    }
-
-    .itinerario {
-      display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 2em;
-      justify-content: center;
-
-      .hora {
-        font-size: var(--tamano-fuente-base);
-        color: purple;
-        font-weight: 700;
-      }
-    }
-  }
+#evento__n {
+  color: oklch(0.87 0.09 82.75);
+}
+#cronograma__n {
+  color: oklch(0.97 0.01 0);
 }
 
-.estelar {
-  font-weight: 700;
-  color: oklch(0.66 0.19 4.75);
+.th {
+  color: oklch(0.87 0.09 82.75);
+}
+.tn {
+  color: oklch(0.97 0.01 0);
+}
+.tnf {
+  color: oklch(0.77 0.14 81.17);
+}
+#se {
+  font-size: var(--espaciado-grande);
+  color: oklch(86.894% 0.08984 82.754 / 0.712);
+}
+#hh {
+  font-size: var(--espaciado-grande);
+}
+
+.section__programa {
+  min-width: 300px;
+  max-width: 650px;
+  padding: 1em;
+  display: grid;
+  justify-self: center;
+  text-align: center;
+  gap: 1.2em;
+}
+
+.ab {
+  margin: 1.2em;
+}
+.btnmm {
+  font-size: var(--tamano-fuente-base);
+  font-weight: bold;
+  padding: 0.4em 1em;
+  border-radius: var(--radio-borde);
+  border: 2px solid oklch(0.65 0.14 64.22);
+  color: oklch(0.97 0.01 0);
+  align-self: center;
+  text-decoration: none;
+  text-align: center;
+}
+
+.galeN {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  padding: 1em;
+
+  img {
+    border-radius: var(--radio-borde);
+  }
 }
